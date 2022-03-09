@@ -14,12 +14,13 @@ import Dashboard from "views/admin/Dashboard.js";
 import Maps from "views/admin/Maps.js";
 import Settings from "views/admin/Settings.js";
 import Tables from "views/admin/Tables.js";
+import Storebranch from "views/admin/Storebranch/Storebranch.js";
 
 export default function Admin() {
   return (
     <>
       <Sidebar />
-      <div className="relative md:ml-64 bg-blueGray-100">
+      <div className="relative md:ml-64">
         <AdminNavbar />
         {/* Header */}
         <HeaderStats />
@@ -29,9 +30,10 @@ export default function Admin() {
             <Route path="/admin/maps" exact component={Maps} />
             <Route path="/admin/settings" exact component={Settings} />
             <Route path="/admin/tables" exact component={Tables} />
+            <Route path="/admin/Storebranch" exact component={Storebranch} />
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
-          <FooterAdmin />
+          {/* <FooterAdmin /> */}
         </div>
       </div>
     </>
