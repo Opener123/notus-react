@@ -11,6 +11,13 @@ export default function Sidebar() {
     <>
       <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
         <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
+          {/* Brand */}
+          <Link
+            className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-xl uppercase font-bold p-4 px-0"
+            to="/"
+          >
+            後台管理
+          </Link>
           {/* Toggler */}
           <button
             className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
@@ -19,22 +26,15 @@ export default function Sidebar() {
           >
             <i className="fas fa-bars"></i>
           </button>
-          {/* Brand */}
-          <Link
-            className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-xl uppercase font-bold p-4 px-0"
-            to="/"
-          >
-            後台管理
-          </Link>
           {/* User */}
-          <ul className="md:hidden items-center flex flex-wrap list-none">
+          {/* <ul className="md:hidden items-center flex flex-wrap list-none">
             <li className="inline-block relative">
               <NotificationDropdown />
             </li>
             <li className="inline-block relative">
               <UserDropdown />
             </li>
-          </ul>
+          </ul> */}
           {/* Collapse */}
           <div
             className={
@@ -117,7 +117,7 @@ export default function Sidebar() {
                   設定
                 </Link>
               </li> */}
-              <li className="items-center">
+              {/* <li className="items-center">
                 <Link
                   className={
                     "text-base uppercase py-3 font-bold block " +
@@ -137,13 +137,11 @@ export default function Sidebar() {
                   ></i>{" "}
                   場館列表
                 </Link>
-              </li>
-
-
+              </li> */}
               <li className="items-center">
                 <Link
                   className={
-                    "text-xs uppercase py-3 font-bold block " +
+                    "text-lg uppercase py-3 font-bold block " +
                     (window.location.href.indexOf("/admin/Storebranch") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
@@ -152,17 +150,15 @@ export default function Sidebar() {
                 >
                   <i
                     className={
-                      "fas fa-table mr-2 text-sm " +
+                      "fas fa-table mr-2 text-lg " +
                       (window.location.href.indexOf("/admin/Storebranch") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
                   ></i>{" "}
-                  Storebranch
+                  場館列表
                 </Link>
               </li>
-
-
               {/* <li className="items-center">
                 <Link
                   className={

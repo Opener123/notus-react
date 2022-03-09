@@ -37,7 +37,8 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 {/* <IndexDropdown /> */}
                 <Link
-                  to="/admin/tables"
+                  // to="/admin/tables"
+                  to="/admin/Storebranch"
                   className="text-xl py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                 >
                   場館列表

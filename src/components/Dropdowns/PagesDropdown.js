@@ -18,8 +18,14 @@ const PagesDropdown = () => {
   };
   return (
     <>
-      <a
-        className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+      <Link
+        to="/admin/Storebranch"
+        className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-lg uppercase font-bold"
+      >
+        後台管理
+      </Link>
+      {/* <a
+        className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-lg uppercase font-bold"
         href="#pablo"
         ref={btnDropdownRef}
         onClick={(e) => {
@@ -27,7 +33,7 @@ const PagesDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        Demo Pages
+        後台管理
       </a>
       <div
         ref={popoverDropdownRef}
@@ -123,7 +129,7 @@ const PagesDropdown = () => {
         >
           Profile
         </Link>
-      </div>
+      </div> */}
     </>
   );
 };
